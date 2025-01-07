@@ -7,6 +7,8 @@ dotenv.config();
 
 //import conn.mjs so that I connect to my db
 import db from './db/conn.mjs';
+//import cors so that I can make requests from my front end to my back end (back and front end can communicate  )
+ import cors from 'cors';
 
 import brainEntries from './routes/brain.mjs';
 import calendarEntries from './routes/entry.mjs';
@@ -22,6 +24,7 @@ const app = express();
 
 
 //MIDDLEWARE
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
 

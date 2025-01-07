@@ -8,6 +8,8 @@ import entryController from '../controllers/brain.mjs';
 // !!!!! to be taken out in deployment
 router.get('/seed', entryController.seed);
 
+// TODO: get individual entry
+// TODO: get based on criteria
 // Index route 
 // ****      /braindump/ 
 // ****      returns all entries
@@ -16,9 +18,19 @@ router.get('/seed', entryController.seed);
 router.get('/', entryController.getEntries);
 
 // TODO: post new entry
-// TODO: get individual entry
-// TODO: get based on criteria
+// create route
+// *** post /api/braindump
+router.post('/', entryController.addEntry);
+
 // TODO: update entry
+// update route
+// *** update /api/braindump/:id
+router.put('/:id', entryController.editEntry);
+
 // TODO: delete entry
+// delete route
+// *** delete /api/braindump/:id
+router.delete('/:id', entryController.deleteEntry);
+
 
 export default router
