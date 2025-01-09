@@ -11,7 +11,7 @@ router.get('/seed', entryController.seed);
 // TODO: get individual entry
 // TODO: get based on criteria
 // Index route 
-// ****      /braindump/ 
+// ****      api/braindump/ 
 // ****      returns all entries
 // NOTE: if the nr of entries is too large, this will need to limit the number of entries returned
 
@@ -20,13 +20,7 @@ router.get('/', entryController.getEntries);
 // TODO: post new entry
 // create route
 // *** post /api/braindump
-router.post('/', entryController.addEntry);
-
-// TODO: update entry
-// update route
-// *** update /api/braindump/:id
-router.put('/:id', entryController.editEntry);
-
+router.post('/', entryController.addEntry);///
 // TODO: delete entry
 // delete route
 // *** delete /api/braindump/:id

@@ -11,7 +11,7 @@ async function seed (req, res) {
                 {
                    entryDate: TODAY,
                      entryType: 'Todo',
-                        description: 'Get this done'
+                        description: 'Get this done'(a)
                 },
                 {
                     entryDate: TODAY,
